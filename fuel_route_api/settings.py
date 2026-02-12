@@ -13,11 +13,13 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.staticfiles",
     "rest_framework",
+    "corsheaders",   # 👈 add this
     "routes",
 ]
 
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
 ]
 
